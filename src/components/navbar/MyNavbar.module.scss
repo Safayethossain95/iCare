@@ -1,0 +1,23 @@
+@import '../../sass/sassStyles/mixins';
+@import '../../sass/sassStyles/variables';
+.navbar{
+    background-color: #eee;
+    height: 80px;
+    position:sticky;
+    top:0px;
+    .navbrand{
+        @include myfont(1.5rem,500,$main_font);
+        position:absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left:0;
+    }
+        .navul{
+            margin:0 auto;
+            a{
+                @include myfont(1rem,400,$main_font);
+                color:$dark_color;
+            }
+        }
+    
+}

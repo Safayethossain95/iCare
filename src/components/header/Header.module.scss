@@ -1,0 +1,18 @@
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
+.header{
+    height: 50px;
+    background-color: $primary_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        @include myfont(16px,500,$main_font);
+        color:#fff;
+        a{
+            @include myfont(16px,500,$main_font);
+            color:#eee;
+        }
+
+    }
+}

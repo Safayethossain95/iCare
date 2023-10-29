@@ -1,0 +1,26 @@
+@import '../../../sass/sassStyles/variables';
+@import '../../../sass/sassStyles/mixins';
+.viewmorebutton{
+    position:relative;
+    button{
+        background-color: $deep_blue;
+        width: 100%;
+        height: 50px;    
+        @include myfont(16px,500,$main_font);
+        color:#F0F4FF;
+        border:0;
+        transition:0.5s;
+        position:absolute;
+        right:0;
+        top:50%;
+        transform: translateY(-50%);
+        svg{
+            margin-left: 13px;
+            font-weight: 700;
+        }
+        &:hover{            
+            width: 170px!important;
+        }
+        
+    }
+}
