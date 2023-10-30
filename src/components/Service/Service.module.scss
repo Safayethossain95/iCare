@@ -1,0 +1,31 @@
+
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
+.mb24{
+    margin-bottom: 24px;
+}
+.headingmain{
+    padding-bottom: 0!important;
+}
+.servicemain{
+    padding:80px 0;
+}
+
+.paddingcustom{
+    padding-left: 14px!important;
+    padding-right: 14px!important;
+    
+}
+.listofitems{
+    .singleitem{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 20px;
+        }
+        h4{
+            @include myfont(1.3rem,500,$main_font);
+            color:$dark_color;
+        }
+    }
+}

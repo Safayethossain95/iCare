@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import LandingPage from './pages/landingPage/LandingPage';
 import OtherPage from './pages/otherPageExample/OtherPage';
-
 const App = () => {
   return (
     <>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,18 +11,51 @@ const MyNavbar = () => {
     const handleClick=()=>{
         navigate('/other')
     }
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > 150) {
+            setIsSticky(true);
+        } else {
+            setIsSticky(false);
+        }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+    
+        if (element) {
+          const navbarHeight = document.getElementById('navbar').offsetHeight;
+          const elementPosition = element.offsetTop - navbarHeight;
+    
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
     return (
         <>
-            <Navbar expand="lg" className={style.navbar}>
+        <div>
+        {isSticky && <div style={{ height: '80px' }}></div>}
+            <Navbar id="navbar" expand="lg" className={isSticky ? 'sticky' : ''}>
                 <Container style={{position:"relative"}}>
                     <Navbar.Brand href="#home" className={style.navbrand}>iCare</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className={style.navul}>
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link onClick={() => scrollToSection('header')} href="#">Home</Nav.Link>
                             <Nav.Link href="#link">About</Nav.Link>
-                            <Nav.Link href="#link">Locations</Nav.Link>
-                            <Nav.Link href="#link">Services</Nav.Link>
+                            <Nav.Link onClick={() => scrollToSection('location')} href="#">Locations</Nav.Link>
+                            <Nav.Link onClick={() => scrollToSection('service')}  href="#">Services</Nav.Link>
                             <Nav.Link href="#link">Institutes</Nav.Link>
                             <Nav.Link href="#link">Partners</Nav.Link>
                           
@@ -31,6 +64,7 @@ const MyNavbar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+        </div>
         </>
     )
 }

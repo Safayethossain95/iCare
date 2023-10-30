@@ -25,8 +25,20 @@ ul,ol{
 a{
     text-decoration: none;
 }
-
- 
+#institutes .slick-slide{
+    padding:0 15px;
+}
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    transition: top 0.5s ease;
+ }
+ #institutes{
+    padding:80px 0;
+ }
 .sticky2{
     position: fixed!important;
     top: 0;
@@ -79,7 +91,7 @@ a{
     }
 }
 .myContainerMini{
-    width:1006px;
+    width:1050px;
     margin:0 auto;
 }
 .myContainerMinimini{
@@ -96,11 +108,10 @@ p{
 
 .sticky {
     position: fixed!important;
-    top: -20px;
+    top: 0px;
     width: 100%;
     z-index: 1030;
-    transition: 0.4s;
-    transform: translateY(20px);
+    transition: 0.4s;    
     background:#fff;
     height: 80px;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.20);

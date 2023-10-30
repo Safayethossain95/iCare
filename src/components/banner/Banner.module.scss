@@ -1,9 +1,11 @@
 @import '../../sass/sassStyles/mixins';
 @import '../../sass/sassStyles/variables';
 .bannerpart{
-    height: calc(100vh - 130px);
-    margin-bottom: 400px;
+    height: calc(100vh - 130px);    
     position:relative;
+    img{
+        height: calc(100vh - 130px);
+    }
     .overlay{
         position:absolute;
         width: 100%;
@@ -23,9 +25,36 @@
             color:$dark_color;
         }
         .form{
-            height: 60vh;
+            height: 410px;
             width: 100%;
-            background-color: #e4e4e4;
+            background-color: #ffffffc5;
+            .formheading{
+                text-align: center;
+                h2{
+                    @include myfont(27px,700,$main_font);
+                    color:$deep_blue;
+                }
+            }
+            form{
+                padding:30px;
+                .formrow{
+                    margin-top: 40px;
+                    input{
+                        height: 42px;
+                    }
+                }
+                .buttondiv{
+                    text-align: center;
+                    button{
+                        border:0;
+                        width: 120px;
+                        height: 42px;
+                        margin:0 auto;
+                        border-radius: 10px;
+                        background-color: $deep_blue;
+                    }
+                }
+            }
         }
     }
 }

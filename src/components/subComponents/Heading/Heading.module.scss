@@ -1,0 +1,11 @@
+@import '../../../sass/sassStyles/variables';
+@import '../../../sass/sassStyles/mixins';
+
+.headingmain{
+    padding:50px 0;
+    
+    h2{
+        @include myfont(40px,700,$main_font);
+        color:$deep_blue;
+    }
+}

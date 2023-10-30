@@ -1,0 +1,19 @@
+@import '../../../sass/sassStyles/variables';
+@import '../../../sass/sassStyles/mixins';
+
+.smfeaturessingle{
+    width: 170px;
+    
+    border:1px solid #eee;
+    padding:20px;
+    text-align: center;
+    .mynumber{
+        @include myfont(16px,500,$main_font);
+        color:$primary_color;
+        margin-top: 15px;
+    }
+    .mytext{
+        @include myfont(15px,500,$main_font);
+        color:$dark_color;        
+    }
+}

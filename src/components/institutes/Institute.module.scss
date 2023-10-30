@@ -1,0 +1,43 @@
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
+
+.institutesmain{
+
+}
+.paragraph{
+    @include myfont(1.2rem,400,$main_font);
+    color:$gray;
+    margin-bottom: 40px;
+}
+
+.singleslide{
+    text-align: center;
+    
+    .overlay{
+        width: auto;
+        z-index: 999;
+        bottom:0;
+        right:0;
+        position: absolute;
+        padding:4px 8px;
+        background-color: $primary_color;
+        p{
+            margin-bottom: 0;
+            @include myfont(13px,600,$main_font);
+            color:#fff;
+        }
+    }
+}
+.mydiv{
+    position:relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        transition:0.5s;
+    }
+    &:hover{
+        img{
+            transform: scale(1.2);
+        }
+    }
+}
