@@ -1,0 +1,9 @@
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
+
+.whystudyabroadmain{
+    padding:80px 0;
+    @include othermedia(mDevice){
+        padding:30px 0;
+    }
+}

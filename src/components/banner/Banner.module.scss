@@ -3,8 +3,14 @@
 .bannerpart{
     height: calc(100vh - 130px);    
     position:relative;
+    @include othermedia(mDevice){
+        height: 750px!important;
+    }
     img{
         height: calc(100vh - 130px);
+        @include othermedia(mDevice){
+            height: 750px!important;
+        }
     }
     .overlay{
         position:absolute;
@@ -13,21 +19,31 @@
         top:0;
         left:0;
         background-color: #eeeeee6b;
-        z-index: 999;
+        z-index: 888;
         display: flex;
         align-items: center;
         h3{
             @include myfont(3rem,700,$main_font);
             color:$deep_blue;
+            @include othermedia(mDevice){
+                @include myfont(25px,700,$main_font);
+            }
         }
         p{
             @include myfont(1rem,400,$main_font);
             color:$dark_color;
+            @include othermedia(mDevice){
+                @include myfont(16px,400,$main_font);
+                margin-bottom: 20px;
+            }
         }
         .form{
             height: 410px;
             width: 100%;
             background-color: #ffffffc5;
+            @include othermedia(mDevice){
+                height: auto;
+            }
             .formheading{
                 text-align: center;
                 h2{

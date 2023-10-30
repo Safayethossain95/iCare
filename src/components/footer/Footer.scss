@@ -1,0 +1,118 @@
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
+
+.headeroffooter{
+    height: 50px;
+    width: 100%;
+    background-color: #006FDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3{
+        @include myfont(20px,400,$main_font);
+        color:#F0F4FF;
+        margin-bottom: 0;
+        @include media(xsmDevice){
+            @include myfont(16px,400,$main_font);
+        }
+        a{
+            @include myfont(20px,400,$main_font);
+        color:#F0F4FF;
+        }
+    }
+}
+.footer{
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #F0F4FF;
+    @include othermedia(mDevice){
+        // height: 500px;
+        padding-top: 25px!important;
+    }
+  
+    h1{
+        @include myfont(30px,600,$main_font);
+        color: $primary_color;
+        margin-bottom: 20px;
+    }
+    .ftsmheading{
+        p{
+            @include myfont(20px,500,$main_font);
+            color: $primary_color;
+            margin-bottom: 20px;
+        }
+    }
+    .footerlogoimg{
+        margin-bottom: 10px;
+    }
+    .socialicons{
+        display: flex;
+        margin-bottom: 84px;
+        @include media(xsmDevice){
+            justify-content: center;
+            margin : 50px 0 37px 0;
+        }
+        .ftsmbox{
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                font-size: 25px;
+                color:#869BAD;
+            }
+        }
+    }
+    .ftlist{
+        ul{
+            padding-left: 0;
+            li{
+                line-height: 40px;
+                a{
+                    @include myfont(14px,400,$main_font);
+                    color:#869BAD;
+                }
+            }
+        }
+    }
+    .emailinput{
+        position: relative;
+        button{
+            position:absolute;
+            width: 120px;
+            height: 50px;
+            background-color:  #001E7C;
+            color:#fff;
+            right:0;
+            top:0;
+            border:0;
+            text-transform: uppercase;
+            @include myfont(14px,700,$main_font);
+            
+        }
+        input{
+            border:0;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            padding-left: 13px;
+            @include myfont(14px,400,$main_font);
+
+            &::placeholder{
+                @include myfont(14px,400,$main_font);
+                color:#869BAD;
+                
+            }
+        }
+        p{
+            @include myfont(14px,400,$main_font);
+            color:#869BAD;
+            margin-top: 14px;
+        }
+    }
+   
+}

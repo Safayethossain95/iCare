@@ -31,6 +31,9 @@
 .mydiv{
     position:relative;
     overflow: hidden;
+    @include othermedia(mDevice){
+        margin-top: 50px;
+    }
     img{
         width: 100%;
         transition:0.5s;

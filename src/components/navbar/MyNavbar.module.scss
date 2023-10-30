@@ -9,9 +9,27 @@
     transform: translateY(-50%);
     left: 0;
     color:$deep_blue!important;
+    @include othermedia(mDevice){
+      position: relative;
+      top:0;
+      transform: translateY(0%);
+
+      
+  }
+    
+}
+.container{
+  @include othermedia(mDevice){
+    justify-content: space-between;
+}
 }
 .navul {
   margin: 0 auto;
+  @include othermedia(mDevice){
+    text-align: center;
+    background-color: #fff;
+    
+}
   a {
     @include myfont(1rem, 400, $main_font);
     color: $dark_color;

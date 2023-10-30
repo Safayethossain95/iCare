@@ -9,6 +9,9 @@
 }
 .servicemain{
     padding:80px 0;
+    @include othermedia(mDevice){
+        padding:0;
+    }
 }
 
 .paddingcustom{
@@ -20,6 +23,7 @@
     .singleitem{
         display: flex;
         align-items: center;
+       
         img{
             margin-right: 20px;
         }

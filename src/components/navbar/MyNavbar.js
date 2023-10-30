@@ -47,20 +47,23 @@ const MyNavbar = () => {
         <div>
         {isSticky && <div style={{ height: '80px' }}></div>}
             <Navbar id="navbar" expand="lg" className={isSticky ? 'sticky' : ''}>
-                <Container style={{position:"relative"}}>
+                <Container className={style.container} style={{position:"relative"}}>
                     <Navbar.Brand href="#home" className={style.navbrand}>iCare</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className={style.navul}>
                             <Nav.Link onClick={() => scrollToSection('header')} href="#">Home</Nav.Link>
-                            <Nav.Link href="#link">About</Nav.Link>
+                            <Nav.Link onClick={() => scrollToSection('aboutus')} href="#">About</Nav.Link>
                             <Nav.Link onClick={() => scrollToSection('location')} href="#">Locations</Nav.Link>
                             <Nav.Link onClick={() => scrollToSection('service')}  href="#">Services</Nav.Link>
-                            <Nav.Link href="#link">Institutes</Nav.Link>
-                            <Nav.Link href="#link">Partners</Nav.Link>
+                            <Nav.Link onClick={() => scrollToSection('institutes')} href="#">Institutes</Nav.Link>
+                            
                           
                         </Nav>
+                        <div className="desktop">
                         <CommonButton w="150px" h="50px" br="43px" text="Apply Now" click={handleClick}/>
+
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

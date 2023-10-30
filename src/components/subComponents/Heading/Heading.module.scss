@@ -3,9 +3,14 @@
 
 .headingmain{
     padding:50px 0;
-    
+    @include othermedia(mDevice){
+        padding:25px 0;
+    }
     h2{
         @include myfont(40px,700,$main_font);
         color:$deep_blue;
+        @include othermedia(mDevice){
+            @include myfont(25px,700,$main_font);
+        }
     }
 }

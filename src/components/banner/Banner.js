@@ -4,6 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Slider from "react-slick";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Banner = () => {
   var settings = {
     dots: false,
@@ -15,6 +17,7 @@ const Banner = () => {
     autoplaySpeed:3000,
     arrows:false
   };
+  AOS.init();
   return (
     <>
       <div className={style.bannerpart}>
@@ -22,18 +25,18 @@ const Banner = () => {
           <Container>
             <Row style={{ alignItems: "center" }}>
               <Col lg={6}>
-                <h3>
+                <h3 data-aos="fade-up" data-aos-duration="400">
                   Discover a world of knowledge and cultural immersion with
                   iCare
                 </h3>
-                <p>
+                <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
                   Unlock Boundless Opportunities with IPE Your Trusted Partner
                   for International Education Adventures and Unforgettable
                   Experiences
                 </p>
               </Col>
               <Col lg={{ span: 5, offset: 1 }}>
-                <div className={style.form}>
+                <div data-aos="fade-in" data-aos-duration="1000" className={style.form}>
                   <Form>
                     <div className={style.formheading}>
                         <h2>Get Connected</h2>

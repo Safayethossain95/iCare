@@ -16,6 +16,12 @@
     
   }
 }
+@mixin othermedia($size) {
+  @if $size == mDevice {
+    @media (min-width: 320px) and (max-width:991px) { @content; }
+  }
+
+}
 
 
 @mixin myfont($font_size,$font_weight,$font_family){

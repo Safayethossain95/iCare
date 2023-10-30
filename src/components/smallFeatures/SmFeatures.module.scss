@@ -1,11 +1,18 @@
 
+@import '../../sass/sassStyles/variables';
+@import '../../sass/sassStyles/mixins';
 
 .smfeaturemain{
 
     margin:80px auto;
-    
+    @include othermedia(mDevice){
+        margin:30px auto;
+    }
     .smfeaturescol{
         display: flex;
         justify-content: center;
+        @include othermedia(mDevice){
+            margin-bottom: 20px;
+        }
     }
 }
