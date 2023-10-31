@@ -77,12 +77,22 @@ const Banner = () => {
             </Row>
           </Container>
         </div>
+        <div className="desktop">
         <Slider {...settings}>
         <img className="w-100 img-fluid" src="./assets/images/banner1.png" alt="" />
         <img className="w-100 img-fluid" src="./assets/images/banner2.jpg" alt="" />
         <img className="w-100 img-fluid" src="./assets/images/banner3.jpg" alt="" />
 
         </Slider>
+        </div>
+        <div className="mobile">
+        <Slider {...settings}>
+        <img className="w-100 img-fluid" src="./assets/images/banner1mobi.png" alt="" />
+        <img className="w-100 img-fluid" src="./assets/images/banner2mobi.jpg" alt="" />
+        <img className="w-100 img-fluid" src="./assets/images/banner3mobi.jpg" alt="" />
+
+        </Slider>
+        </div>
       </div>
     </>
   );

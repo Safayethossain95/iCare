@@ -20,6 +20,13 @@
     
 }
 .listofitems{
+    width:100vw!important;
+    
+    @include othermedia(mDevice){
+        text-align: center;
+        padding-left: 20vw;
+      
+    }
     .singleitem{
         display: flex;
         align-items: center;
@@ -30,6 +37,19 @@
         h4{
             @include myfont(1.3rem,500,$main_font);
             color:$dark_color;
+            @include othermedia(mDevice){
+                @include myfont(13px,500,$main_font);
+            }
         }
     }
+}
+
+.mobiimgdiv{
+   text-align: center;
+   margin-top: 40px;
+   @include othermedia(mDevice){
+    img{
+        margin:10px;
+    }
+   }
 }

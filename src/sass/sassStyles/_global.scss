@@ -16,7 +16,7 @@
 html {
     scroll-behavior: smooth;
   }
-body{
+html,body{
     overflow-x: hidden;
 }
 ul,ol{
@@ -36,8 +36,14 @@ a{
     left: 0px;
     transition: top 0.5s ease;
     z-index: 999;
+    transition: none; 
  }
-
+ .navbar-collapse {
+    transition: none; /* Disable transition for collapsing element */
+}
+button:focus{
+    box-shadow: none!important;
+}
  #institutes{
     padding:80px 0;
     @include othermedia(mDevice){
@@ -106,6 +112,10 @@ a{
 .myContainerMinimini{
     width:960px;
     margin:0 auto;
+    @include othermedia(mDevice){
+        width: calc(100vw - 30px);
+        margin:0 auto;
+    }
 }
 .myContainer896{
     width:896px;

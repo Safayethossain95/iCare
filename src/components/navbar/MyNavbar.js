@@ -46,7 +46,7 @@ const MyNavbar = () => {
         <>
         <div>
         {isSticky && <div style={{ height: '80px' }}></div>}
-            <Navbar id="navbar" expand="lg" className={isSticky ? 'sticky' : ''}>
+            <Navbar id="navbar" expand="lg" className={isSticky ? 'sticky navbar-expand-lg' : 'navbar-expand-lg'}>
                 <Container className={style.container} style={{position:"relative"}}>
                     <Navbar.Brand href="#home" className={style.navbrand}>iCare</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

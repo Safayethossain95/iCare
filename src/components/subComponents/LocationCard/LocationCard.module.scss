@@ -6,10 +6,12 @@
     margin-bottom: 30px;
     position:relative;
     overflow: hidden;
-    
+    @include othermedia(mDevice){
+        width:100%;
+    }
     img{
         transition: 0.4s;
-
+        width:100%;
     }
     &:hover{
         img{
